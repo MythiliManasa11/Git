@@ -1,0 +1,16 @@
+<body>
+  <form (ngSubmit)="getContact()">
+      <div id="searchform">
+        <h4>Enter Name:</h4> 
+      <input type="text" name= "t1" placeholder="Search here.." [(ngModel)]= "conn.contactName">
+          <button  id="search"type="submit">Search</button>
+      
+      <table  id = "table" cellpadding ="20" cellspacing="10"*ngIf="conn" >
+        <tr >
+          <td>{{conn.contactName}}</td>
+          <td>{{conn.contactNumber}}</td> 
+          </tr>
+        </table>
+    </div>
+    </form>
+  </body>
